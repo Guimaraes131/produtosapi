@@ -1,12 +1,20 @@
 package io.github.Guimaraes131.produtosapi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 // POJO -> Plain Old Java Object
+@Entity
 public class Produto {
 
+    @Id
     private String id;
     private String nome;
     private String descricao;
     private Double preco;
+
+    public Produto() {
+    }
 
     public Produto(String id, String nome, String descricao, Double preco) {
         this.id = id;
